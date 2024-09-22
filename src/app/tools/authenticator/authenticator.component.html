@@ -1,0 +1,39 @@
+<div id="authenticator">
+    <mat-card id="authenticator-content">
+      <mat-card-header>
+        <mat-card-title>{{getStateText()}}</mat-card-title>
+      </mat-card-header>
+
+
+      <div *ngIf="isLoginState()">
+        <input placeholder="Email" />
+        <input placeholder="Password" type="password" />
+        <button mat-flat-button style="background-color: #559a6e; color: white; padding: 10px 20px;border-radius: 4px;">Iniciar Sesion</button>
+      </div>
+
+      <div *ngIf="isRegisterState()">
+        <input placeholder="Email" />
+        <input placeholder="Contraseña" type="password"/>
+        <input placeholder="Confirmar contraseña" type="password"/>
+        <button mat-flat-button style="background-color: #559a6e; color: white; padding: 10px 20px;border-radius: 4px;">Registrarse</button>
+      </div>
+
+      <div *ngIf="isForgotPasswordState()">
+        <input placeholder="Email" />
+        <button mat-flat-button style="background-color: #559a6e; color: white; padding: 10px 20px;border-radius: 4px;">Reset</button>
+      </div>
+
+      <mat-card-actions align="end">
+        <button mat-flat-button
+                *ngIf="!isLoginState()"
+                (click)="onLoginClick()">Iniciar Sesion</button>
+        <button mat-flat-button
+                *ngIf="!isRegisterState()"
+                (click)="onCreateAccountClick()">Registrarse</button>
+        <button mat-flat-button
+              *ngIf="!isForgotPasswordState()"
+              (click)="onForgotPasswordClick()">Olvidó su contraseña</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

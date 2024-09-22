@@ -1,0 +1,155 @@
+#nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.5em;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
+}
+
+#nav-bar-content {
+    display: flex; /* Cambiado a flex para un mejor control del espaciado */
+    justify-content: space-between;
+    align-items: center; /* Para alinear verticalmente todos los elementos */
+    height: 100%;
+    background-color: #559a6e;
+    padding: 0 2em;
+    box-sizing: border-box;
+}
+
+#nav-bar-left, #nav-bar-right{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 2em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: white;
+}
+
+#nav-bar-left {
+    display: flex;
+    align-items: center; /* Centra verticalmente el logo y los enlaces */
+    height: 100%;
+}
+
+#nav-bar-links {
+    display: flex;
+    gap: 2em; /* Espacio entre los enlaces */
+    margin-left: 2em; /* Espacio entre el logo y los enlaces */
+}
+
+.nav-bar-link {
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-bar-link:hover {
+    color: #F3D19C; /* Cambia el color al pasar el mouse */
+}
+
+
+#nav-bar-right{
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.nav-bar-button {
+    background-color: white; 
+    color: #559a6e; 
+    border: 2px solid #559a6e; 
+    border-radius: 10px; 
+    padding: 0.5em 1.2em; 
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Efecto hover en los botones */
+.nav-bar-button:hover {
+    background-color: #d96e57; 
+    color: white;
+}
+
+.nav-bar-items{
+    font-size: 1em;
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Para suavizar el cambio de color en hover */
+}
+
+.nav-bar-items:hover {
+    color: #F3D19C; /* Terracota o el color que prefieras */
+}
+
+.nav-bar-logo {
+    height: 100%; /* O ajusta según el tamaño necesario */
+    max-height: 5em; /* Para limitar la altura del logo */
+    object-fit: contain; /* Asegura que la imagen se ajuste bien */
+    margin-left: 1em;
+}
+
+.mockup {
+    width: 100%; /* Ocupa el 100% del ancho */
+    height: auto; /* Mantiene la proporción para que no se deforme */
+    display: block; /* Elimina el espacio en línea alrededor de la imagen */
+    margin: 0 auto; /* Centra la imagen si está dentro de un contenedor más pequeño */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #559a6e; /* Color de fondo verde */
+  padding: 40px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+  color: #212121; /* Color del texto negro */
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 8em;
+}
+
+.footer-logo img {
+  width: 190px; /* Tamaño del logo */
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icons a img:hover {
+  opacity: 0.7; /* Efecto hover para los iconos */
+}
